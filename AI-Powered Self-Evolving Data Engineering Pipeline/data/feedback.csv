@@ -1,0 +1,3 @@
+feedback_id,insight,status,correction
+1,Sales drop detected,incorrect,Seasonal variation
+2,Laptop demand increasing,correct,No Correction

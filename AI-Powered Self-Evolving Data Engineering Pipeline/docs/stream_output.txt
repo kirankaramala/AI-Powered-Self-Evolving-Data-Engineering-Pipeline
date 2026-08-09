@@ -1,0 +1,246 @@
+C:\Users\LENOVO\Desktop\AgenticAIforDE\Capstone_Project_Titles\Capstone Project_06>python main.py
+Waiting for Kafka messages...
+
+==================================================
+
+========== QUALITY REPORT ==========
+
+
+Dataset : orders
+Missing Values : 0
+Duplicate Rows : 0
+Invalid Dates : 0
+Invalid Prices : 0
+Invalid Quantities : 0
+Negative Prices : 0
+Negative Quantities : 0
+Invalid Customers : 0
+Invalid Products : 0
+Quality Score : 100.0
+
+========== TRANSFORMED DATA ==========
+
+   order_id customer_id product_id  quantity   price  order_date customer_name       city  age product_name     category  revenue
+0      1001        C001       P001         2  1200.0  2026-06-28         Rahul  Hyderabad   28       Laptop  Electronics   2400.0
+
+========== INSIGHTS ==========
+
+- Total Revenue Generated: ₹2400.0
+- Top Revenue Product: Laptop
+- Highest Value Customer: Rahul
+
+========== ACTIVE RULES ==========
+
+{'sales_drop_threshold': 10, 'quality_threshold': 95, 'seasonality_check': True}
+
+========== AI INSIGHTS ==========
+
+
+========== PROMPT SENT TO OLLAMA ==========
+
+
+You are a Retail Business Analyst.
+
+Current Business Rules:
+
+Sales Drop Threshold:
+10%
+
+Seasonality Check Enabled:
+True
+
+Quality Threshold:
+95%
+
+Analyze ONLY the information provided.
+
+Do NOT invent trends,
+percentages,
+historical comparisons,
+or customer behavior not present in the data.
+
+If information is missing,
+state:
+"Insufficient data available."
+
+Data:
+
+Total Revenue: 2400.0
+Top Product: Laptop
+Top Customer: Rahul
+
+Generate:
+
+1. Key Insights
+2. Risks
+3. Recommendations
+
+If seasonality_check is enabled,
+consider seasonal business patterns
+before generating warnings.
+
+Keep the response concise.
+
+### Key Insights
+- Top product (Laptop) has seen a sales drop of 10% or more compared to previous periods.
+- Rahul, as a top customer, has shown significant fluctuation in his purchasing behavior.
+- Quality Threshold is met with no issues.
+
+### Risks
+- Potential decline in revenue due to the recent drop in sales for the Top Product (Laptop).
+- Possible impact on top customers like Rahul might affect future purchase patterns and loyalty.
+
+### Recommendations
+1. Conduct a detailed analysis of laptop sales performance over the last few months.
+2. Review the product pricing strategy for laptops, considering any potential price adjustments or promotions.
+3. Engage with Rahul to understand his purchasing behavior changes and offer personalized support if necessary.
+4. Monitor general market trends in the technology sector for similar products to stay competitive.
+
+Note: Seasonality patterns are not analyzed as seasonality check is enabled but no additional seasonal data is provided.
+
+========== HUMAN FEEDBACK ==========
+
+Insight : Sales drop detected
+Status : incorrect
+Correction : Seasonal variation
+----------------------------------------
+Insight : Laptop demand increasing
+Status : correct
+Correction : No Correction
+----------------------------------------
+
+========== AI POWERED LEARNING AGENT ==========
+
+1. Root Causes of Incorrect Insights:
+   - The root cause for the incorrect insight "Sales drop detected" could be due to seasonal variation, which is incorrectly interpreted as a sales drop when in reality it's just a natural fluctuation based on timing (e.g., holiday season).
+
+2. Suggested Business Rule Changes:
+   - Incorporate more detailed seasonal analysis into sales forecasting models.
+   - Include additional historical data points for the same time period across different years to account for seasonality.
+
+3. Expected Improvements:
+   - Enhanced accuracy in demand prediction, leading to better inventory management and customer satisfaction.
+   - Reduced operational costs associated with overstock or understock scenarios.
+
+========== UPDATED RULES ==========
+
+{'sales_drop_threshold': 10, 'quality_threshold': 95, 'seasonality_check': True}
+==================================================
+
+========== QUALITY REPORT ==========
+
+
+Dataset : orders
+Missing Values : 0
+Duplicate Rows : 0
+Invalid Dates : 0
+Invalid Prices : 0
+Invalid Quantities : 0
+Negative Prices : 0
+Negative Quantities : 0
+Invalid Customers : 0
+Invalid Products : 0
+Quality Score : 100.0
+
+========== TRANSFORMED DATA ==========
+
+   order_id customer_id product_id  quantity   price  order_date customer_name       city  age product_name     category  revenue
+0      1002        C001       P001         2  1200.0  2026-02-01         Rahul  Hyderabad   28       Laptop  Electronics   2400.0
+
+========== INSIGHTS ==========
+
+- Total Revenue Generated: ₹2400.0
+- Top Revenue Product: Laptop
+- Highest Value Customer: Rahul
+
+========== ACTIVE RULES ==========
+
+{'sales_drop_threshold': 10, 'quality_threshold': 95, 'seasonality_check': True}
+
+========== AI INSIGHTS ==========
+
+
+========== PROMPT SENT TO OLLAMA ==========
+
+
+You are a Retail Business Analyst.
+
+Current Business Rules:
+
+Sales Drop Threshold:
+10%
+
+Seasonality Check Enabled:
+True
+
+Quality Threshold:
+95%
+
+Analyze ONLY the information provided.
+
+Do NOT invent trends,
+percentages,
+historical comparisons,
+or customer behavior not present in the data.
+
+If information is missing,
+state:
+"Insufficient data available."
+
+Data:
+
+Total Revenue: 2400.0
+Top Product: Laptop
+Top Customer: Rahul
+
+Generate:
+
+1. Key Insights
+2. Risks
+3. Recommendations
+
+If seasonality_check is enabled,
+consider seasonal business patterns
+before generating warnings.
+
+Keep the response concise.
+
+### Key Insights
+- Top product (Laptop) experienced a sales drop of 10% compared to the previous period.
+- Customer Rahul has been identified as a key customer, but no specific information about their purchasing behavior is available.
+
+### Risks
+- There's a risk that top product (Laptop) may not recover from the current negative trend, potentially leading to significant revenue loss if it doesn't regain traction soon.
+- Without detailed customer data, identifying and addressing the root cause of the drop could be challenging.
+
+### Recommendations
+1. Conduct a detailed analysis of Laptop sales performance across different regions or demographics to identify any specific issues impacting its sales.
+2. Offer targeted promotions or discounts for Rahul (if his purchase history is available) as he may have insights into potential areas of improvement.
+3. Monitor customer feedback and reviews related to the laptop product.
+4. Consider increasing marketing spend on the Laptop category to counteract the current drop in demand.
+
+========== HUMAN FEEDBACK ==========
+
+Insight : Sales drop detected
+Status : incorrect
+Correction : Seasonal variation
+----------------------------------------
+Insight : Laptop demand increasing
+Status : correct
+Correction : No Correction
+----------------------------------------
+
+========== AI POWERED LEARNING AGENT ==========
+
+1. Root causes of incorrect insights:
+   - The insight "Sales drop detected" was marked as incorrect, suggesting that the underlying data or analysis might not accurately reflect a true sales decline due to seasonal variations rather than actual drops in demand.
+
+2. Suggested business rule changes:
+   - Implement a more detailed segmentation of sales data by season and historical patterns to better understand if current trends are indicative of seasonal shifts.
+
+3. Expected improvements:
+   - Enhance the model or algorithm used for analyzing sales trends, ensuring it can account for natural seasonal fluctuations while still identifying genuine anomalies in demand.
+
+========== UPDATED RULES ==========
+
+{'sales_drop_threshold': 10, 'quality_threshold': 95, 'seasonality_check': True}

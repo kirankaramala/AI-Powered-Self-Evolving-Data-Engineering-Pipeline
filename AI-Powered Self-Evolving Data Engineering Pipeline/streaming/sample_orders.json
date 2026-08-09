@@ -1,0 +1,12 @@
+[
+    {
+        "insight": "Sales drop detected",
+        "status": "incorrect",
+        "correction": "Seasonal variation"
+    },
+    {
+        "insight": "Laptop demand increasing",
+        "status": "correct",
+        "correction": "No Correction"
+    }
+]

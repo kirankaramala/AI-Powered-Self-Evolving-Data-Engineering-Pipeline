@@ -1,0 +1,7 @@
+order_id,customer_id,product_id,quantity,price,order_date,customer_name,city,age,product_name,category,revenue
+1001,C001,P001,2,1200,2026-02-01,Rahul,Hyderabad,28,Laptop,Electronics,2400
+1002,C002,P002,1,500,2026-02-01,Priya,Bangalore,32,Headphones,Electronics,500
+1003,C001,P003,3,800,2026-02-02,Rahul,Hyderabad,28,Coffee Maker,Home Appliance,2400
+1004,C003,P001,1,1500,2026-02-03,Vikram,Chennai,40,Laptop,Electronics,1500
+1005,C004,P002,2,300,2026-02-03,Anjali,Mumbai,26,Headphones,Electronics,600
+1006,C005,P002,2,1450,2026-02-04,Krishna,Hyderabad,37,Headphones,Electronics,2900

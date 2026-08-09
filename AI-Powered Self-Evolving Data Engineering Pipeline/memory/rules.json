@@ -1,0 +1,5 @@
+{
+    "sales_drop_threshold": 10,
+    "quality_threshold": 95,
+    "seasonality_check": true
+}

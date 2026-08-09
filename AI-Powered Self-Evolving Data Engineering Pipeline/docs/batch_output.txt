@@ -1,0 +1,130 @@
+
+========== QUALITY REPORT ==========
+
+
+Dataset : orders
+Missing Values : 0
+Duplicate Rows : 0
+Invalid Dates : 0
+Invalid Prices : 0
+Invalid Quantities : 0
+Negative Prices : 0
+Negative Quantities : 0
+Invalid Customers : 0
+Invalid Products : 0
+Quality Score : 100.0
+
+========== TRANSFORMED DATA ==========
+
+   order_id customer_id product_id  quantity  price  order_date customer_name       city  age  product_name        category  revenue
+0      1001        C001       P001         2   1200  2026-02-01         Rahul  Hyderabad   28        Laptop     Electronics     2400
+1      1002        C002       P002         1    500  2026-02-01         Priya  Bangalore   32    Headphones     Electronics      500
+2      1003        C001       P003         3    800  2026-02-02         Rahul  Hyderabad   28  Coffee Maker  Home Appliance     2400
+3      1004        C003       P001         1   1500  2026-02-03        Vikram    Chennai   40        Laptop     Electronics     1500
+4      1005        C004       P002         2    300  2026-02-03        Anjali     Mumbai   26    Headphones     Electronics      600
+5      1006        C005       P002         2   1450  2026-02-04       Krishna  Hyderabad   37    Headphones     Electronics     2900
+
+========== INSIGHTS ==========
+
+- Total Revenue Generated: ₹10300
+- Top Revenue Product: Headphones
+- Highest Value Customer: Rahul
+
+========== ACTIVE RULES ==========
+
+{'sales_drop_threshold': 10, 'quality_threshold': 95, 'seasonality_check': True}
+
+========== AI INSIGHTS ==========
+
+
+========== PROMPT SENT TO OLLAMA ==========
+
+
+You are a Retail Business Analyst.
+
+Current Business Rules:
+
+Sales Drop Threshold:
+10%
+
+Seasonality Check Enabled:
+True
+
+Quality Threshold:
+95%
+
+Analyze ONLY the information provided.
+
+Do NOT invent trends,
+percentages,
+historical comparisons,
+or customer behavior not present in the data.
+
+If information is missing,
+state:
+"Insufficient data available."
+
+Data:
+
+Total Revenue: 10300
+Top Product: Headphones
+Top Customer: Rahul
+
+Generate:
+
+1. Key Insights
+2. Risks
+3. Recommendations
+
+If seasonality_check is enabled,
+consider seasonal business patterns
+before generating warnings.
+
+Keep the response concise.
+
+### Key Insights:
+- Top Product: Headphones, with a significant contribution to total revenue of 10300.
+- Rahul is the top customer contributing most to sales.
+- Current Sales Drop Threshold at 10% needs monitoring.
+- Seasonality Check is enabled, suggesting potential seasonal patterns affecting sales performance.
+
+### Risks:
+- There could be an impending drop in sales by more than 10%, necessitating proactive measures.
+- If Rahul's contribution significantly drops or if Headphones sales underperform, it might indicate a risk to the business.
+- Potential variations in customer behavior and product demand could impact revenue due to seasonal effects.
+
+### Recommendations:
+- Conduct detailed analysis on Rahul’s purchase history during different seasons to understand his buying patterns better.
+- Monitor the performance of Top Product: Headphones across various time periods (e.g., monthly, quarterly) for any signs of seasonality-driven fluctuations in sales.
+- Consider implementing targeted marketing campaigns around key selling events or product launches, especially if they align with known seasonal trends.
+- Keep a watch on competitors' strategies and market conditions that could influence customer behavior.
+
+These recommendations are designed to address potential risks while maintaining alignment with the current business rules.
+
+========== HUMAN FEEDBACK ==========
+
+Insight : Sales drop detected
+Status : incorrect
+Correction : Seasonal variation
+----------------------------------------
+Insight : Laptop demand increasing
+Status : correct
+Correction : No Correction
+----------------------------------------
+
+========== AI POWERED LEARNING AGENT ==========
+
+1. Root Causes of Incorrect Insights:
+   - The sales drop insight is likely incorrect, as it contradicts the observed laptop demand increase in another record.
+
+2. Suggested Business Rule Changes:
+   - Implement a more comprehensive analysis to differentiate between normal seasonal variations and anomalies that could be affecting sales data.
+   - Establish a robust forecasting model considering historical data trends, current market conditions, and external factors such as economic indicators and promotional activities.
+
+3. Expected Improvements:
+   - Enhanced accuracy in demand predictions will allow for better inventory management and supply chain optimization.
+   - Reduced operational costs due to more precise stock levels and improved customer satisfaction from product availability.
+
+========== UPDATED RULES ==========
+
+{'sales_drop_threshold': 10, 'quality_threshold': 95, 'seasonality_check': True}
